@@ -1,0 +1,13 @@
+{
+  "name": "neqpora-sns",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Neqpora - 多機能SNS Webサービス",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy"
+  },
+  "devDependencies": {
+    "wrangler": "^4.0.0"
+  }
+}
