@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="Neqpora - みんなでつながる多機能SNS"
+  >
+
+  <title>Neqpora</title>
+
+  <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+
+  <!-- =========================
+       HEADER
+  ========================== -->
+  <header class="topbar">
+
+    <div class="topbar-inner">
+
+      <a href="/" class="logo">
+        <span class="logo-mark">N</span>
+        <span>Neqpora</span>
+      </a>
+
+      <div class="search-box">
+        <span class="search-icon">⌕</span>
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="Neqporaを検索..."
+        >
+      </div>
+
+      <div class="top-actions">
+
+        <button class="icon-button" title="通知">
+          🔔
+          <span class="notification-dot"></span>
+        </button>
+
+        <button class="icon-button" title="メッセージ">
+          💬
+        </button>
+
+        <button class="profile-mini">
+          <span class="avatar small">N</span>
+          <span class="profile-name">ねくぽら</span>
+        </button>
+
+      </div>
+
+    </div>
+
+  </header>
+
+
+  <!-- =========================
+       APP
+  ========================== -->
+  <div class="app-layout">
+
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+      <nav class="nav-menu">
+
+        <a href="#" class="nav-item active">
+          <span>🏠</span>
+          <span>ホーム</span>
+        </a>
+
+        <a href="#" class="nav-item">
+          <span>🔥</span>
+          <span>トレンド</span>
+        </a>
+
+        <a href="#" class="nav-item">
+          <span>🔔</span>
+          <span>通知</span>
+        </a>
+
+        <a href="#" class="nav-item">
+          <span>💬</span>
+          <span>メッセージ</span>
+        </a>
+
+        <a href="#" class="nav-item">
+          <span>🔖</span>
+          <span>保存</span>
+        </a>
+
+        <a href="#" class="nav-item">
+          <span>👤</span>
+          <span>プロフィール</span>
+        </a>
+
+        <a href="#" class="nav-item">
+          <span>⚙️</span>
+          <span>設定</span>
+        </a>
+
+      </nav>
+
+
+      <button class="post-button" id="openPostButton">
+        <span>＋</span>
+        投稿する
+      </button>
+
+
+      <div class="sidebar-bottom">
+
+        <div class="current-user">
+
+          <span class="avatar">
+            N
+          </span>
+
+          <div class="current-user-info">
+            <strong>ねくぽら</strong>
+            <span>@neqpora</span>
+          </div>
+
+          <button class="more-button">
+            ⋯
+          </button>
+
+        </div>
+
+      </div>
+
+    </aside>
+
+
+    <!-- MAIN -->
+    <main class="main-content">
+
+      <div class="feed-header">
+        <h1>ホーム</h1>
+
+        <div class="feed-tabs">
+          <button class="feed-tab active">
+            おすすめ
+          </button>
+
+          <button class="feed-tab">
+            フォロー中
+          </button>
+        </div>
+      </div>
+
+
+      <!-- POST COMPOSER -->
+      <section class="composer">
+
+        <div class="composer-top">
+
+          <span class="avatar">
+            N
+          </span>
+
+          <textarea
+            id="postInput"
+            maxlength="500"
+            placeholder="いま何してる？"
+          ></textarea>
+
+        </div>
+
+        <div class="composer-bottom">
+
+          <div class="composer-tools">
+
+            <button title="画像">
+              🖼️
+            </button>
+
+            <button title="絵文字">
+              😊
+            </button>
+
+            <button title="GIF">
+              GIF
+            </button>
+
+          </div>
+
+          <div class="composer-right">
+
+            <span id="charCount">
+              0 / 500
+            </span>
+
+            <button
+              class="submit-post"
+              id="postButton"
+              disabled
+            >
+              投稿
+            </button>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- FEED -->
+      <section id="feed">
+
+
+        <!-- POST -->
+        <article class="post">
+
+          <div class="post-avatar">
+            <span class="avatar">
+              N
+            </span>
+          </div>
+
+          <div class="post-body">
+
+            <div class="post-header">
+
+              <strong>
+                ねくぽらユーザー
+              </strong>
+
+              <span class="verified">
+                ✓
+              </span>
+
+              <span class="username">
+                @neqpora
+              </span>
+
+              <span class="post-time">
+                · たった今
+              </span>
+
+              <button class="post-more">
+                ⋯
+              </button>
+
+            </div>
+
+            <div class="post-text">
+              こんにちは！Neqporaへようこそ 👋
+              <br>
+              ここから新しいSNSを作っていきます！
+            </div>
+
+            <div class="post-actions">
+
+              <button>
+                💬
+                <span>0</span>
+              </button>
+
+              <button>
+                🔁
+                <span>0</span>
+              </button>
+
+              <button class="like-button">
+                ♡
+                <span>0</span>
+              </button>
+
+              <button>
+                🔖
+              </button>
+
+              <button>
+                ↗
+              </button>
+
+            </div>
+
+          </div>
+
+        </article>
+
+
+        <!-- POST -->
+        <article class="post">
+
+          <div class="post-avatar">
+            <span class="avatar official">
+              N
+            </span>
+          </div>
+
+          <div class="post-body">
+
+            <div class="post-header">
+
+              <strong>
+                Neqpora運営
+              </strong>
+
+              <span class="verified official-check">
+                ✓
+              </span>
+
+              <span class="username">
+                @official
+              </span>
+
+              <span class="post-time">
+                · 1時間前
+              </span>
+
+              <button class="post-more">
+                ⋯
+              </button>
+
+            </div>
+
+            <div class="post-text">
+              みんなで楽しくつながろう！✨
+              <br><br>
+              Neqporaは現在開発中です。
+              これからたくさんの機能を追加していきます 🚀
+            </div>
+
+            <div class="post-actions">
+
+              <button>
+                💬
+                <span>2</span>
+              </button>
+
+              <button>
+                🔁
+                <span>1</span>
+              </button>
+
+              <button class="like-button">
+                ♡
+                <span>8</span>
+              </button>
+
+              <button>
+                🔖
+              </button>
+
+              <button>
+                ↗
+              </button>
+
+            </div>
+
+          </div>
+
+        </article>
+
+      </section>
+
+    </main>
+
+
+    <!-- RIGHT SIDEBAR -->
+    <aside class="right-sidebar">
+
+      <section class="side-card">
+
+        <h2>
+          Neqporaを始めよう
+        </h2>
+
+        <p>
+          アカウントを作って、
+          みんなとつながろう！
+        </p>
+
+        <button class="side-primary">
+          新規登録
+        </button>
+
+        <button class="side-secondary">
+          ログイン
+        </button>
+
+      </section>
+
+
+      <section class="side-card">
+
+        <h2>
+          トレンド
+        </h2>
+
+        <div class="trend-item">
+          <span>話題のトピック</span>
+          <strong>#Neqpora</strong>
+        </div>
+
+        <div class="trend-item">
+          <span>いま人気</span>
+          <strong>#SNS</strong>
+        </div>
+
+        <div class="trend-item">
+          <span>カテゴリー</span>
+          <strong>#Webサービス</strong>
+        </div>
+
+      </section>
+
+
+      <footer class="footer">
+
+        <span>Neqpora</span>
+        <span>・</span>
+        <span>利用規約</span>
+        <span>・</span>
+        <span>プライバシー</span>
+
+        <br><br>
+
+        © 2026 Neqpora
+
+      </footer>
+
+    </aside>
+
+  </div>
+
+
+  <!-- =========================
+       POST MODAL
+  ========================== -->
+
+  <div
+    class="modal-overlay"
+    id="postModal"
+  >
+
+    <div class="modal">
+
+      <div class="modal-header">
+
+        <strong>
+          新しい投稿
+        </strong>
+
+        <button id="closePostButton">
+          ×
+        </button>
+
+      </div>
+
+      <textarea
+        id="modalPostInput"
+        maxlength="500"
+        placeholder="いま何してる？"
+      ></textarea>
+
+      <div class="modal-bottom">
+
+        <span id="modalCharCount">
+          0 / 500
+        </span>
+
+        <button
+          id="modalPostButton"
+          class="submit-post"
+          disabled
+        >
+          投稿する
+        </button>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <script src="/app.js"></script>
+
+</body>
+</html>
